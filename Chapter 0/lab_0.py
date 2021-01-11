@@ -145,7 +145,11 @@ def Dictionaries():
     # Test your comprehension with k = 'Bilbo' and k = 'Frodo' and with the following
     # list of dictionaries:  dlist = [{'Bilbo':'Ian','Frodo':'Elijah'}, {'Bilbo':'Martin','Thorin':'Richard'}]
     dlist = [{'Bilbo':'Ian','Frodo':'Elijah'}, {'Bilbo':'Martin','Thorin':'Richard'}]
-    k = 'Bilbo' and k = 'Frodo'
+    key1, key2 = 'Bilbo', 'Frodo'
+    key1_list = [x[key1] if key1 in x.keys() else 'NOT PRESENT' for x in dlist]
+    key2_list = [x[key2] if key2 in x.keys() else 'NOT PRESENT' for x in dlist]
+    print(key1_list)
+    print(key2_list)
     
 def main(): 
     SimpleExpressions() #0.5.1 - 0.5.3
